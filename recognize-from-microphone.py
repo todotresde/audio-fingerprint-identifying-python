@@ -184,7 +184,7 @@ if __name__ == '__main__':
 
   print ('')
 
-  if total_matches_found > 0:
+  if total_matches_found > 300:
     msg = ' ** totally found %d hash matches'
     print (colored(msg, 'green') % total_matches_found)
 
