@@ -63,8 +63,9 @@ if __name__ == '__main__':
       msg = '   finished fingerprinting, got %d unique hashes'
 
       values = []
+
       for hash, offset in hashes:
-        values.append((song_id, hash, offset))
+        values.append((song_id, hash, offset.item()))
 
       msg = '   storing %d hashes in db' % len(values)
       print (colored(msg, 'green'))

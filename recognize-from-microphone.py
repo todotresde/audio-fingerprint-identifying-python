@@ -113,7 +113,7 @@ if __name__ == '__main__':
 
       x = db.executeAll(query, split_values)
       matches_found = len(x)
-      print(x)
+      
       if matches_found > 0:
         msg = '   ** found %d hash matches (step %d/%d)'
         print (colored(msg, 'green') % (

@@ -82,6 +82,8 @@ class SqliteDatabase(Database):
           in zip_longest(fillvalue=fillvalue, *args))
 
     for split_values in grouper(values, 1000):
+      split_values = list(split_values)
+
       query = "INSERT OR IGNORE INTO %s (%s) VALUES (?, ?, ?)" % (table, ", ".join(columns))
       self.cur.executemany(query, split_values)
 
